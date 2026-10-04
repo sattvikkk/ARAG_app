@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from agentic_rag.config import settings  # noqa: E402
+from arag_app.config import settings  # noqa: E402
 
 PRODUCTS = [
     (1, "Mechanical Keyboard TKL", "peripherals", 89.90),
