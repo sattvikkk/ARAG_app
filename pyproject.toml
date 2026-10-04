@@ -12,6 +12,7 @@ dependencies = [
     "anyio==4.13.0",
     "certifi==2026.2.25",
     "charset-normalizer==3.4.7",
+    "ddgs>=9.16.0",
     "firecrawl-py>=4.45.1",
     "h11==0.16.0",
     "httpcore==1.0.9",
