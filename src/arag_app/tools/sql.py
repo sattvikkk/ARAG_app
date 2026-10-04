@@ -35,7 +35,7 @@ SQL_PROMPT = ChatPromptTemplate.from_messages(
 )
 
 
-class SQLQUERY(BaseModel):
+class SQLQuery(BaseModel):
     query: str = Field(description="The SELECT statement to execute.")
 
 
@@ -56,7 +56,7 @@ def get_db() -> SQLDatabase:
 def run_sql_question(question: str, llm, max_attempts: int = 3):
     db = get_db()
     schema = db.get_table_info()
-    chain = SQL_PROMPT | llm.with_structured_output(SQLQUERY)
+    chain = SQL_PROMPT | llm.with_structured_output(SQLQuery)
 
     feedback = ""
     failure = "no query generated"
